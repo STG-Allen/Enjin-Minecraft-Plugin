@@ -3,10 +3,10 @@ package com.enjin.rpc.mappings.services;
 import com.enjin.core.Enjin;
 import com.enjin.core.services.Service;
 import com.enjin.rpc.EnjinRPC;
-import com.enjin.rpc.mappings.mappings.proxy.NodeState;
 import com.enjin.rpc.mappings.mappings.general.RPCData;
 import com.enjin.rpc.mappings.mappings.plugin.Status;
 import com.enjin.rpc.mappings.mappings.plugin.SyncResponse;
+import com.enjin.rpc.mappings.mappings.proxy.NodeState;
 import com.google.gson.reflect.TypeToken;
 import com.thetransactioncompany.jsonrpc2.JSONRPC2Request;
 import com.thetransactioncompany.jsonrpc2.JSONRPC2Response;
@@ -16,7 +16,8 @@ import com.thetransactioncompany.jsonrpc2.client.JSONRPC2SessionException;
 import java.util.HashMap;
 import java.util.Map;
 
-public class BungeeCordService implements Service {
+public class VelocityService implements Service {
+
     public RPCData<SyncResponse> get(final Status status, final Map<String, NodeState> servers) {
         String method = "Bungeecord.get";
 
@@ -30,8 +31,8 @@ public class BungeeCordService implements Service {
 
         Integer id = EnjinRPC.getNextRequestId();
 
-        JSONRPC2Session  session  = null;
-        JSONRPC2Request  request  = null;
+        JSONRPC2Session session = null;
+        JSONRPC2Request request = null;
         JSONRPC2Response response = null;
 
         try {
@@ -43,8 +44,8 @@ public class BungeeCordService implements Service {
             Enjin.getLogger().debug("JSONRPC2 Response: " + response.toJSONString());
 
             RPCData<SyncResponse> data = EnjinRPC.gson.fromJson(response.toJSONString(),
-                                                                new TypeToken<RPCData<SyncResponse>>() {
-                                                                }.getType());
+                new TypeToken<RPCData<SyncResponse>>() {
+                }.getType());
             data.setRequest(request);
             data.setResponse(response);
             return data;

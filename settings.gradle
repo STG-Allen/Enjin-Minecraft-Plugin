@@ -1,1 +1,3 @@
 include 'dev-tools', 'core', 'rpcapi', 'common', 'bukkit', 'bungee', 'sponge6', 'sponge7'
+include 'velocity'
+

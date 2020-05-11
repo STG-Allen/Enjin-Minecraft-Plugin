@@ -6,7 +6,7 @@ import com.enjin.bungee.sync.data.NotificationsInstruction;
 import com.enjin.bungee.sync.data.RemoteConfigUpdateInstruction;
 import com.enjin.core.Enjin;
 import com.enjin.core.EnjinServices;
-import com.enjin.rpc.mappings.mappings.bungeecord.NodeState;
+import com.enjin.rpc.mappings.mappings.proxy.NodeState;
 import com.enjin.rpc.mappings.mappings.general.RPCData;
 import com.enjin.rpc.mappings.mappings.plugin.Instruction;
 import com.enjin.rpc.mappings.mappings.plugin.PlayerInfo;

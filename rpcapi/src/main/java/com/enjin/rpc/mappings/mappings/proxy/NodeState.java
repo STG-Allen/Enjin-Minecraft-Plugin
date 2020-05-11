@@ -1,4 +1,4 @@
-package com.enjin.rpc.mappings.mappings.bungeecord;
+package com.enjin.rpc.mappings.mappings.proxy;
 
 import com.google.gson.annotations.SerializedName;
 import lombok.EqualsAndHashCode;
